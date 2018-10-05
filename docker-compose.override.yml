@@ -1,0 +1,13 @@
+version: '2.3'
+
+services:
+  muspelheim:
+    image: muspelheim
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: build
+    ports:
+      - 5001:5001
+    volumes:
+       - ./src:/app
